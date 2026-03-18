@@ -1,68 +1,67 @@
-/* src/index.css */
+/* --- IDENTIDAD VISUAL --- */
 :root {
   --fuchsia: #FF0059;
-  --cherry: #A9003B;
-  --white: #FFFFFF;
-  --carbon: #232323;
   --black: #000000;
+  --carbon: #111111;
+  --white: #ffffff;
 }
 
-body {
+/* --- BASE: IMPORTANTE PARA EL SCROLL --- */
+html, body {
   margin: 0;
+  padding: 0;
+  width: 100%;
+  min-height: 100%;
+  /* Permitimos scroll vertical, bloqueamos el horizontal */
+  overflow-x: hidden; 
+  overflow-y: auto; 
   background-color: var(--black);
   color: var(--white);
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   line-height: 1.6;
+  scroll-behavior: smooth;
 }
 
+* {
+  box-sizing: border-box;
+}
+
+/* El contenedor de las secciones de abajo */
 .container {
-  max-width: 900px;
+  max-width: 1100px;
   margin: 0 auto;
-  padding: 40px 20px;
+  padding: 80px 10%;
+  width: 100%;
 }
 
-h1 {
-  color: var(--fuchsia);
-  font-size: 3.5rem;
-  text-transform: uppercase;
-  letter-spacing: -1px;
-  margin-bottom: 0;
-}
-
+/* --- COMPONENTES --- */
 h2 {
-  color: var(--cherry);
-  border-bottom: 2px solid var(--cherry);
+  color: var(--fuchsia);
+  border-bottom: 2px solid var(--fuchsia);
   display: inline-block;
   padding-bottom: 5px;
+  margin-bottom: 40px;
+  text-transform: uppercase;
+  letter-spacing: 2px;
 }
 
-/* Estilo para las tarjetas de proyectos */
 .card {
   background-color: var(--carbon);
-  padding: 25px;
+  padding: 30px;
   border-radius: 12px;
-  border-left: 5px solid var(--fuchsia); /* Detalle en fucsia */
+  border: 1px solid #222;
+  border-left: 5px solid var(--fuchsia);
   transition: all 0.3s ease;
-  margin-bottom: 20px;
+  margin-bottom: 30px;
 }
 
 .card:hover {
-  transform: scale(1.02);
-  border-left-color: var(--white);
-  box-shadow: 0 10px 20px rgba(255, 0, 89, 0.2);
+  transform: translateY(-5px);
+  border-color: var(--fuchsia);
+  box-shadow: 0 10px 30px rgba(255, 0, 89, 0.1);
 }
 
-.btn-ver {
-  background-color: var(--fuchsia);
-  color: var(--white);
-  border: none;
-  padding: 10px 20px;
-  border-radius: 4px;
-  font-weight: bold;
-  cursor: pointer;
-  text-transform: uppercase;
-}
-
-.btn-ver:hover {
-  background-color: var(--cherry);
-}
+/* Scrollbar minimalista fucsia */
+::-webkit-scrollbar { width: 8px; }
+::-webkit-scrollbar-track { background: #000; }
+::-webkit-scrollbar-thumb { background: var(--fuchsia); border-radius: 10px; }
