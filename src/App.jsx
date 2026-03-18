@@ -1,30 +1,28 @@
 import React from "react";
 import "./index.css"; 
-// Importamos el Navbar y el nuevo Hero
+// Importaciones de componentes
 import Navbar from "./components/Navbar"; 
-import Hero from "./components/Hero"; // <-- IMPORTAMOS EL HERO
+import Hero from "./components/Hero"; 
 import ProjectCard from "./components/ProjectCard";
+import Footer from "./components/Footer"; // <-- 1. IMPORTAMOS EL FOOTER
 
 export default function App() {
   return (
     <div className="app-wrapper">
-      {/* 1. La barra de navegación se queda arriba, pegada (sticky) */}
+      {/* 1. Navbar: Pegado arriba */}
       <Navbar />
 
-      {/* 2. El HERO: Lo ponemos AQUÍ, FUERA del container.
-             Al estar justo después del Navbar (que es sticky),
-             el Hero empezará justo debajo y ocupará 100vh. */}
+      {/* 2. Hero: Ocupa el 100% del ancho y 100vh */}
       <Hero /> 
 
-      {/* 3. El contenedor para el resto del contenido (Proyectos, etc.) */}
+      {/* 3. Contenido Principal: Con márgenes (Container) */}
       <div className="container">
-        {/* Ya no necesitamos el <header> viejo con "Isaac/Desarrollador React",
-            porque el Hero ya cumple esa función con un diseño mucho mejor.
-            Lo hemos borrado para limpiar el código. */}
-
-        <section id="proyectos">
-          <h2>Mis Proyectos</h2>
-          <div style={{ marginTop: '30px' }}>
+        <section id="proyectos" style={{ padding: '80px 0' }}>
+          <h2 style={{ fontSize: '2.5rem', fontWeight: '800', color: '#fff' }}>
+            MIS <span style={{ color: '#FF0059' }}>PROYECTOS</span>
+          </h2>
+          
+          <div style={{ marginTop: '50px', display: 'grid', gap: '20px' }}>
             <ProjectCard 
               titulo="Portfolio Eléctrico" 
               desc="Diseño basado en Hot Fuchsia y Carbon Black." 
@@ -36,6 +34,8 @@ export default function App() {
           </div>
         </section>
       </div>
+        {/* 4. Footer: Pegado abajo */}
+        <Footer />
     </div>
   );
 }

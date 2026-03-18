@@ -66,7 +66,7 @@ export default function Navbar() {
 const styles = {
   nav: {
     width: '100%',
-    backgroundColor: 'rgba(10, 10, 10, 0.9)',
+    backgroundColor: 'rgba(10, 10, 10, 0.8)',
     backdropFilter: 'blur(15px)',
     WebkitBackdropFilter: 'blur(15px)',
     borderBottom: '2px solid rgba(255, 0, 89, 0.3)', 
