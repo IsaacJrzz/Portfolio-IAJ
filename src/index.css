@@ -65,3 +65,62 @@ h2 {
 ::-webkit-scrollbar { width: 8px; }
 ::-webkit-scrollbar-track { background: #000; }
 ::-webkit-scrollbar-thumb { background: var(--fuchsia); border-radius: 10px; }
+
+/* --- Efectos para los enlaces del Navbar --- */
+.nav-link-custom {
+  position: relative;
+}
+
+.nav-link-custom:hover {
+  color: #FF0059 !important; /* Forzamos el fucsia sobre el blanco */
+  text-shadow: 0 0 10px rgba(255, 0, 89, 0.6), 0 0 20px rgba(255, 0, 89, 0.4);
+  transform: translateY(-2px); /* Un pequeño salto sutil */
+}
+
+/* Opcional: una barrita debajo que crece al pasar el ratón */
+/* --- Efectos avanzados para los enlaces del Navbar (.nav-link-custom) --- */
+.nav-link-custom {
+  position: relative;
+  transition: all 0.3s ease;
+  z-index: 1; /* Para asegurarnos de que el pseudo-elemento no tape el texto */
+}
+
+/* El estado base de los enlaces cuando el ratón NO está encima */
+.nav-link-custom:hover {
+  color: #FF0059 !important; /* Forzamos el fucsia sobre el blanco base */
+  text-shadow: 0 0 10px rgba(255, 0, 89, 0.6), 0 0 20px rgba(255, 0, 89, 0.4);
+  transform: translateY(-2px); /* Un pequeño salto sutil hacia arriba */
+}
+
+/* * Pseudo-elemento ::after (La barra de subrayado)
+ * Se posiciona absolutamente respecto al enlace (.nav-link-custom)
+ * Inicialmente es una línea invisible (width: 0) centrada debajo del texto
+ * Al hacer hover, se expande para ocupar todo el ancho del enlace
+ */
+.nav-link-custom::after {
+  content: '';
+  position: absolute;
+  
+  /* Posición base de la barra (abajo y centrada) */
+  bottom: -5px; /* Separación del texto */
+  left: 50%;   /* Empieza justo en el medio horizontal */
+  
+  /* Dimensiones base (sin ancho) */
+  width: 0; 
+  height: 2px; /* Grosor de la línea */
+  
+  /* Color y brillo neón de la barra */
+  background-color: #FF0059;
+  box-shadow: 0 0 8px #FF0059, 0 0 15px rgba(255, 0, 89, 0.5);
+  
+  /* Animación: Transición suave de la posición y el ancho */
+  transition: width 0.3s ease, left 0.3s ease;
+}
+
+/* * Estado Hover: Cuando el ratón pasa por encima
+ * La barra se expande ocupando todo el ancho
+ */
+.nav-link-custom:hover::after {
+  width: 100%; /* Ocupa el 100% del enlace */
+  left: 0;     /* Mueve el inicio a la izquierda para cubrir todo */
+}

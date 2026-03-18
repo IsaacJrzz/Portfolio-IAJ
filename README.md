@@ -1,32 +1,38 @@
-# ⚡ Isaac | React Developer Portfolio
+# ⚡ Isaac Alonso | Fullstack Software & Systems Architecture
 
-¡Hola! Soy **Isaac**, un apasionado del desarrollo frontend. Este es mi portfolio personal, construido desde cero para mostrar mis habilidades, mis proyectos y mi evolución con tecnologías modernas.
+![React](https://img.shields.io/badge/React-20232A?style=for-the-badge&logo=react&logoColor=61DAFB)
+![Vite](https://img.shields.io/badge/Vite-646CFF?style=for-the-badge&logo=vite&logoColor=white)
+![CSS3](https://img.shields.io/badge/CSS3-1572B6?style=for-the-badge&logo=css3&logoColor=white)
+![Status](https://img.shields.io/badge/Status-En_Desarrollo-FF0059?style=for-the-badge)
 
----
-
-## 🎨 Concepto y Diseño
-El diseño de este sitio se basa en una estética **Cyber-Dark**, utilizando una paleta de colores de alto impacto:
-
-* **Fondo:** `Black` (#000000) y `Carbon Black` (#232323) para un look profesional y profundo.
-* **Acentos:** `Hot Fuchsia` (#FF0059) y `Cherry Rose` (#A9003B) para guiar la atención del usuario.
-* **Tipografía:** Limpia y moderna en blanco puro para máxima legibilidad.
-
-## 🚀 Tecnologías Destacadas
-Este portfolio no es solo visual, está construido con las mejores herramientas del ecosistema actual:
-
-* **React:** Para una interfaz reactiva y basada en componentes reutilizables.
-* **Vite:** Como entorno de desarrollo de última generación para un rendimiento ultrarrápido.
-* **CSS Custom Properties:** Gestión de colores mediante variables nativas para un código limpio y fácil de mantener.
-
-## 📁 Secciones del Proyecto
-1.  **Header:** Presentación personal con impacto visual.
-2.  **Proyectos:** Galería de tarjetas interactivas que muestran mi trabajo.
-3.  **Footer:** Información de contacto y créditos.
+Portfolio personal de alto impacto visual y rendimiento optimizado. Este proyecto no es solo una carta de presentación, sino un ejercicio de **ingeniería de frontend** y diseño de interfaces modernas bajo una estética **Cyber-Dark**.
 
 ---
 
-## 🏗️ Sobre el Código
-El proyecto sigue una arquitectura de **Componentes**, lo que permite que elementos como las tarjetas de proyectos (`ProjectCard`) sean independientes y escalables. He decidido no utilizar frameworks de CSS externos para demostrar un dominio sólido de **CSS puro**.
+## 🎨 Sistema de Diseño: Cyber-Dark Concept
+El layout se ha estructurado utilizando una jerarquía visual de alto contraste para dirigir el flujo de atención del usuario (User Flow):
 
----
-> "Transformando ideas en interfaces vibrantes." - **Isaac**
+* **Core Layers:** Implementación de `Pure Black` (#000000) y `Carbon Deep` (#232323) para generar profundidad y reducir la fatiga visual.
+* **High-Voltage Accents:** Uso de `Electric Fuchsia` (#FF0059) para llamadas a la acción (CTAs) y `Cherry Glow` (#A9003B) para estados interactivos.
+* **Glassmorphism:** Navegación persistente con desenfoque de fondo real (`backdrop-filter`) para una experiencia inmersiva y futurista.
+
+## 🚀 Stack Tecnológico
+Para garantizar una experiencia fluida y un despliegue eficiente, se han seleccionado las siguientes herramientas:
+
+* **React 18:** Arquitectura basada en componentes funcionales y Hooks para una gestión de estado ágil y predecible.
+* **Vite:** Tooling de última generación que permite un ciclo de desarrollo ultrarrápido y un empaquetado de producción optimizado.
+* **Vanilla CSS Architecture:** Uso exhaustivo de **Variables CSS (Custom Properties)** y **Flexbox/Grid**. Se ha evitado el uso de frameworks externos para maximizar el control sobre el *bundle size* y demostrar dominio técnico en estilos nativos.
+
+## 🛠️ Características Técnicas
+* **Responsive Typography:** Implementación de funciones `clamp()` para una escalabilidad fluida sin depender exclusivamente de media queries.
+* **Fixed Hybrid Navigation:** Barra de navegación con detección de viewport y efectos de neón dinámicos.
+* **Component-Driven Development (CDD):** Estructura de archivos organizada por componentes desacoplados (`Navbar`, `Hero`, `ProjectCard`), facilitando el mantenimiento y la escalabilidad.
+* **Zero-Latency Scroll:** Optimización de las propiedades de desbordamiento (`overflow`) para garantizar una navegación vertical fluida a 100vh.
+
+## 📁 Estructura del Proyecto
+```bash
+src/
+ ├── components/       # Componentes de UI reutilizables y aislados
+ ├── assets/           # Recursos estáticos (Logos, imágenes)
+ ├── App.jsx           # Orquestador principal de la aplicación
+ └── index.css         # Definición del sistema de diseño y variables globales
