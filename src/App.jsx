@@ -49,7 +49,7 @@ export default function App() {
           <div style={{ 
             width: '60px', 
             height: '4px', 
-            backgroundColor: '#FF0059', // Estaba en #000000, ahora es rosa
+            backgroundColor: '#000000', // Estaba en #000000, ahora es rosa
             margin: '20px auto', 
             borderRadius: '2px' 
           }}></div>
