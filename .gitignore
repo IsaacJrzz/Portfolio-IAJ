@@ -1,3 +1,13 @@
-node_modules
-dist
-.env
+# Dependencias
+node_modules/
+.pnp
+.pnp.js
+
+# Producción
+dist/
+build/
+
+# Varios
+.DS_Store
+*.local
+.vscode/
